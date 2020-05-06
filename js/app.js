@@ -2,7 +2,7 @@
 
 var hours = [
   '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm',
-  '6pm', '7pm'];
+  '6pm', '7pm', 'Daily Location Total'];
 
 function Locations(name, minCustomer, maxCustomer, avgCookie) {
   this.name = name;
@@ -26,7 +26,6 @@ function getRandomNumber(min, max) {
 }
 
 Locations.prototype.calcCookiesSoldEachHour = function(){
-  // multiply the customers by the average cookies each customer buys
   for(var i = 0; i < this.customersPerHour.length; i++){
     var wholeCookiesSoldEachHour = Math.ceil(this.customersPerHour[i] * this.avgCookiesPerCustomer);
     this.cookiesPerHour.push(wholeCookiesSoldEachHour);
@@ -34,10 +33,17 @@ Locations.prototype.calcCookiesSoldEachHour = function(){
   }
 };
 
+// I need to add cookie totals by store, by hour and place in footer
+// I need to call the parent element and create footer
+// I need to create a for loop that loops through each opening hour and totals pre-existing cookies per hour data
+// Create a function that add cookiesPerHour for all locations and totals them
+
+
 Locations.prototype.render = function(){
   this.calcCustomersPerHour();
   this.calcCookiesSoldEachHour();
   var tableElement = document.getElementById('table');
+  // var rowtimes = document.createElement('thead');
   var rowElement = document.createElement('tr');
   var rowHeader = document.createElement('th');
 
