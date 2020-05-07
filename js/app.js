@@ -11,7 +11,7 @@ function Locations(name, minCustomer, maxCustomer, avgCookie) {
   this.avgCookiesPerCustomer = avgCookie;
   this.customersPerHour = [];
   this.cookiesPerHour = [];
-  this.totalCookies = 0;
+  this.totalCookiesForDay = 0;
 }
 
 Locations.prototype.calcCustomersPerHour = function(){
@@ -20,33 +20,35 @@ Locations.prototype.calcCustomersPerHour = function(){
     this.customersPerHour.push(customersThisHour);
   }
 };
-// helper function
+
+// helper functions
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 Locations.prototype.calcCookiesSoldEachHour = function(){
+  this.calcCustomersPerHour();
   for(var i = 0; i < this.customersPerHour.length; i++){
     var wholeCookiesSoldEachHour = Math.ceil(this.customersPerHour[i] * this.avgCookiesPerCustomer);
     this.cookiesPerHour.push(wholeCookiesSoldEachHour);
-    this.totalCookies += wholeCookiesSoldEachHour;
+    this.totalCookiesForDay += wholeCookiesSoldEachHour;
   }
 };
+// Why is this not working?
 
-// I need to add cookie totals by store, by hour and place in footer
-// I need to call the parent element and create footer
-// I need to create a for loop that loops through each opening hour and totals pre-existing cookies per hour data
-// Create a function that add cookiesPerHour for all locations and totals them
+// Locations.prototype.calcCookiesForTheDay = function(){
+//   this.calcCookiesSoldEachHour();
+//   for(var i = 0; i<this.cookiesPerHour.length; i++){
+//     this.totalCookiesForDay += this.cookiesPerHour[i];
+//   }
+// };
 
-
+// Only for the body of the table
 Locations.prototype.render = function(){
-  this.calcCustomersPerHour();
-  this.calcCookiesSoldEachHour();
+  this.calcCookiesSoldEachHour ();
   var tableElement = document.getElementById('table');
-  // var rowtimes = document.createElement('thead');
   var rowElement = document.createElement('tr');
   var rowHeader = document.createElement('th');
-
 
   rowHeader.textContent = this.name;
   rowElement.appendChild(rowHeader);
@@ -56,7 +58,7 @@ Locations.prototype.render = function(){
     rowElement.appendChild(rowData);
   }
   rowData = document.createElement('td');
-  rowData.textContent = this.totalCookies;
+  rowData.textContent = this.totalCookiesForDay;
   rowElement.appendChild(rowData);
 
   tableElement.appendChild(rowElement);
@@ -73,4 +75,12 @@ tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+
+
+
+
+
+
+
+
 

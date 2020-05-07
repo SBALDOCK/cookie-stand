@@ -4,6 +4,7 @@ html{
 }
 
 header{
+  margin-bottom: 10px;
   width: 100%;
   text-align: center;
 }
@@ -15,36 +16,77 @@ header{
 h1{
   font-weight: bold;
   font-size: 40px;
+  margin-bottom: 30px;
   margin-top: 40px;
 }
-
-section{
-  margin-top: 40px;
-}
-
 
 a{
   font-size: 20px;
 }
+ /* work below */
 
-.sales{
-  height: 130px;
-  margin-left: 50px;
-  margin-right: 50px;
-  position: relative;
-  width: 100%;
-}
-
-.thingstobuy{
+ #onlinestore1{
   text-align: center;
   position: relative;
   width: 100%;
+ }
+
+ .merchandise1{
+  border: 1px solid black;
+  display: inline-block;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+ }
+
+ #t-shirt{
+   float: right;
+   height: 250px;
+   width: 250px;
+ }
+
+ #cutter{
+  float: right;
+  height: 250px;
+  width: 250px;
 }
+
+
+#onlinestore2{
+  text-align: center;
+  position: relative;
+  width: 100%;
+ }
+
+ .merchandise2{
+  border: 1px solid black;
+  display: inline-block;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+ }
+
+ #magnets{
+   float: right;
+   height: 250px;
+   width: 250px;
+ }
+
+ #cookies{
+  float: right;
+  height: 250px;
+  width: 350px;
+}
+
+
+/* work above */
 
 #locationSection{
-  text-align: center;
+  margin-top: 30px;
   position: relative;
-  width: 100%;
+  text-align: center;
 }
 
 h2{
@@ -66,8 +108,8 @@ h2{
 
 .backgroundpic{
  height: 130px;
- position: relative;
  opacity: 10%;
+ position: relative;
  width: 100%;
 }
 
