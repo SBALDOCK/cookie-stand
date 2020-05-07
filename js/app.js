@@ -2,7 +2,7 @@
 var tableElement = document.getElementById('table');
 var hours = [
   '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm',
-  '6pm', '7pm', 'Daily Location Total'];
+  '6pm', '7pm'];
 var allLocations = [];
 
 function Locations(name, minCustomer, maxCustomer, avgCookie) {
@@ -53,6 +53,30 @@ Locations.prototype.render = function(){
   tableElement.appendChild(rowElement);
 };
 
+// // Add times to top of table
+function renderHeaderRow(){
+  var rowElement = document.createElement('tr');
+  var rowData = document.createElement('td');
+  rowElement.appendChild(rowData);
+  for(var i = 0; i < hours.length; i++){
+    rowData = document.createElement('td');
+    rowData.textContent = hours[i];
+    rowElement.appendChild(rowData);
+  }
+  rowData = document.createElement('td');
+  rowData.textContent = 'Daily Location Total';
+  rowElement.appendChild(rowData);
+  tableElement.appendChild(rowElement);
+}
+//   rowElement.textContent = hours;
+//   for(var i=0; i<hours.length; i++){
+//     tableElement.appendChild(rowElement);
+//   }
+// }
+
+
+
+//This calculates column totals
 function renderFooterRow(){
   var totalOfAllTotals = 0;
   //create tr
@@ -64,7 +88,6 @@ function renderFooterRow(){
   rowElement.appendChild(rowData);
   //append to parent
   tableElement.appendChild(rowElement);
-
 
   for(var i=0; i<hours.length; i++){
 
@@ -93,6 +116,50 @@ function renderFooterRow(){
 
 }
 
+// var formEl = document.getElementById('newcookiestand');
+// formEl.addEventListener('submit', handleClick);
+
+// function handleClick(event){
+//   event.preventDefault();
+
+//   // if(event.target.cookiestand){
+//   //   console.log('The new store is ', event.target);
+//   //   console.log('the event.target.cookiestand is ', event.target.cookiestand);
+//   //   console.log('The event.target.textContent is ', event.target.textContent);
+//   //   console.log('The event.target.cookiestand.value is ', event.target.cookiestand.value);
+//   // }
+//   if(event.target.minimum){
+//     console.log('The minimum customers per hour is ', event.target);
+//     console.log('The event.target.minimum is ', event.target.minimum);
+//     console.log('The event.target.textContent is ', event.target.textContent);
+//     console.log('The event.target.minimum.value is ', event.target.minimum.value);
+//   }
+// }
+
+var formEl = document.getElementById('newcookiestand');
+formEl.addEventListener('submit', handleFormSubmit);
+
+function handleFormSubmit(event){
+  event.preventDefault();
+
+  if(event.target){
+    console.log('The event.target is ', event.target);
+    console.log('The event.target.cookiestand is ', event.target.cookiestand);
+    console.log('The event.target.cookiestand.value is ', event.target.cookiestand.value);
+    console.log('The event.target.minimum is ', event.target.minimum);
+    console.log('The event.target.minimum.value is', event.target.minimum.value);
+    console.log('The event.target.maximum is ', event.target.maximum);
+    console.log('The event.target.maximum.value is ', event.target.maximum.value);
+    console.log('The event.target.average is ', event.target.average);
+    console.log('The event.target.average.value is ', event.target.average.value);
+
+    // var cookiestand = event.target.cookiestand.value;
+    // var minimum = event.target.minimum.value;
+    // var maximum = event.target.maximum.value;
+    // var average = event.target.average.value;
+  }
+}
+
 // helper functions
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -104,13 +171,14 @@ var dubai = new Locations('Dubai', 11, 38, 3.7);
 var paris = new Locations('Paris', 20, 38, 2.3);
 var lima = new Locations('Lima', 2, 16, 4.6);
 
+renderHeaderRow();
 seattle.render();
 tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
 renderFooterRow();
-
+handleFormSubmit();
 
 
 
