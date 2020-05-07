@@ -18,32 +18,141 @@ h1{
   margin-top: 40px;
 }
 
-section{
-  margin-top: 40px;
-}
-
-
-a{
-  font-size: 20px;
-}
-
-.sales{
-  height: 130px;
-  margin-left: 50px;
-  margin-right: 50px;
+#nav{
+  display: inline-block;
+  margin-top: 30px;
   position: relative;
-  width: 100%;
+  text-align: center;
 }
 
-.thingstobuy{
+.pagelinks{
+  background-color: salmon;
+  border-radius: 25px;
+  color: black;
+  display: inline-block;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 7px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.pagelinks:hover{
+  color: rgb(230, 208, 206);
+  font-weight: bold;
+}
+
+.pagelinks:visited{
+  text-decoration: none;
+}
+
+#onlinestore1{
   text-align: center;
   position: relative;
   width: 100%;
+ }
+
+ .merchandise1{
+  border: 1px solid black;
+  display: inline-block;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px; 
+  width: 500px;
+ }
+
+ #t-shirt{
+   float: right;
+   height: 250px;
+   width: 250px;
+ }
+
+ #cutter{
+  float: right;
+  height: 250px;
+  width: 250px;
+}
+
+
+#onlinestore2{
+  text-align: center;
+  position: relative;
+  width: 100%;
+ }
+
+ .merchandise2{
+  border: 1px solid black;
+  display: inline-block;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px; 
+  width: 500px;
+ }
+
+ #magnets{
+   float: right;
+   height: 250px;
+   width: 250px;
+ }
+
+ #cookies{
+  float: right;
+  height: 150px;
+  margin-top: 50px;
+  width: 250px;
+}
+
+.container{
+  border: 1px solid black;
+  height: 225px;
+  margin-left: 675px;
+  margin-right: 80px;
+  margin-top: 30px; 
+  position: relative;
+  width: 400px;
+}
+
+.container:hover .fadetotext{
+  opacity: 90%;
+}
+
+.fadetotext{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0%;
+  transition: .5s ease;
+  background-color: salmon;
+}
+
+.userreview{
+  display: block;
+  width: 400px;
+}
+
+.paidactors{
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 #locationSection{
-  text-align: center;
+  margin-top: 30px; 
   position: relative;
+  text-align: center;
   width: 100%;
 }
 
