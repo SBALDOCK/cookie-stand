@@ -48,7 +48,7 @@ h1{
 }
 
 #onlinestore1{
-  text-align: center;
+  text-align: center; 
   position: relative;
   width: 100%;
  }
@@ -60,19 +60,20 @@ h1{
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px; 
+  text-align: left;
   width: 500px;
  }
 
  #t-shirt{
-   float: right;
-   height: 250px;
-   width: 250px;
+  float: right;
+  height: 150px;
+  width: 150px;
  }
 
  #cutter{
   float: right;
-  height: 250px;
-  width: 250px;
+  height: 150px;
+  width: 150px;
 }
 
 
@@ -93,42 +94,28 @@ h1{
  }
 
  #magnets{
-   float: right;
-   height: 250px;
-   width: 250px;
+  float: right;
+  height: 150px;
+  width: 150px;
  }
 
  #cookies{
   float: right;
-  height: 150px;
-  margin-top: 50px;
-  width: 250px;
+  height: 80px;
+  width: 150px;
 }
 
-#userreviews{
-  display: inline-block;
-  width: 1050px;
-}
 
 #container{
   border: 1px solid black;
-  float: right;
+  position: relative;
   height: 225px;
-  margin-left: 0px;
+  margin-left: 580px;
   margin-right: 40px;
   margin-top: 30px; 
   width: 400px;
 }
 
-#reviews{
-  border: 1px solid black;
-  float: left;
-  height: 225px;
-  margin-left: 150px;
-  margin-right: 10px;
-  margin-top: 30px; 
-  width: 400px;
-}
 
 #container:hover .fadetotext{
   opacity: 90%;

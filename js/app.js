@@ -1,8 +1,9 @@
 'use strict';
-
+var tableElement = document.getElementById('table');
 var hours = [
   '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm',
   '6pm', '7pm', 'Daily Location Total'];
+var allLocations = [];
 
 function Locations(name, minCustomer, maxCustomer, avgCookie) {
   this.name = name;
@@ -12,6 +13,7 @@ function Locations(name, minCustomer, maxCustomer, avgCookie) {
   this.customersPerHour = [];
   this.cookiesPerHour = [];
   this.totalCookiesForDay = 0;
+  allLocations.push(this);
 }
 
 Locations.prototype.calcCustomersPerHour = function(){
@@ -21,10 +23,6 @@ Locations.prototype.calcCustomersPerHour = function(){
   }
 };
 
-// helper functions
-function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
 Locations.prototype.calcCookiesSoldEachHour = function(){
   this.calcCustomersPerHour();
@@ -34,19 +32,10 @@ Locations.prototype.calcCookiesSoldEachHour = function(){
     this.totalCookiesForDay += wholeCookiesSoldEachHour;
   }
 };
-// Why is this not working?
-
-// Locations.prototype.calcCookiesForTheDay = function(){
-//   this.calcCookiesSoldEachHour();
-//   for(var i = 0; i<this.cookiesPerHour.length; i++){
-//     this.totalCookiesForDay += this.cookiesPerHour[i];
-//   }
-// };
 
 // Only for the body of the table
 Locations.prototype.render = function(){
   this.calcCookiesSoldEachHour ();
-  var tableElement = document.getElementById('table');
   var rowElement = document.createElement('tr');
   var rowHeader = document.createElement('th');
 
@@ -64,6 +53,51 @@ Locations.prototype.render = function(){
   tableElement.appendChild(rowElement);
 };
 
+function renderFooterRow(){
+  var totalOfAllTotals = 0;
+  //create tr
+  var rowElement = document.createElement('tr');
+  //create td
+  var rowData = document.createElement('td');
+  rowData.textContent = 'Hourly Total';
+  //append td
+  rowElement.appendChild(rowData);
+  //append to parent
+  tableElement.appendChild(rowElement);
+
+
+  for(var i=0; i<hours.length; i++){
+
+    var sum = 0;
+
+    for(var j=0; j<allLocations.length; j++){
+      sum += allLocations[j].cookiesPerHour[i];
+    }
+
+    totalOfAllTotals += sum;
+    // create a td
+    rowData = document.createElement('td');
+    // fill it with sum
+    rowData.textContent = sum;
+    rowElement.appendChild(rowData);
+
+  }
+
+  rowData = document.createElement('td');
+  rowData.textContent = totalOfAllTotals;
+  rowElement.appendChild(rowData);
+  // append to the table tow
+  rowElement.appendChild(rowData);
+
+  tableElement.appendChild(rowElement);
+
+}
+
+// helper functions
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 var seattle = new Locations('Seattle', 23, 65, 6.3);
 var tokyo = new Locations('Tokyo', 3, 24, 1.2);
 var dubai = new Locations('Dubai', 11, 38, 3.7);
@@ -75,6 +109,7 @@ tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+renderFooterRow();
 
 
 
