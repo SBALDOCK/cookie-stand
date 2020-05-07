@@ -1,6 +1,7 @@
 /* font-family: 'Playfair Display', serif; */
 
 html{
+
 }
 
 header{
@@ -104,17 +105,32 @@ h1{
   width: 250px;
 }
 
-.container{
+#userreviews{
+  display: inline-block;
+  width: 1050px;
+}
+
+#container{
   border: 1px solid black;
+  float: right;
   height: 225px;
-  margin-left: 675px;
-  margin-right: 80px;
+  margin-left: 0px;
+  margin-right: 40px;
   margin-top: 30px; 
-  position: relative;
   width: 400px;
 }
 
-.container:hover .fadetotext{
+#reviews{
+  border: 1px solid black;
+  float: left;
+  height: 225px;
+  margin-left: 150px;
+  margin-right: 10px;
+  margin-top: 30px; 
+  width: 400px;
+}
+
+#container:hover .fadetotext{
   opacity: 90%;
 }
 
@@ -131,7 +147,7 @@ h1{
   background-color: salmon;
 }
 
-.userreview{
+.realfamily{
   display: block;
   width: 400px;
 }
@@ -139,7 +155,7 @@ h1{
 .paidactors{
   color: white;
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 16px;
   position: absolute;
   top: 50%;
   left: 50%;
