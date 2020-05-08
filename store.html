@@ -17,37 +17,99 @@
         <div class="merchandise1">
           <img id="t-shirt" src="pics/shirt.jpg">
           <p>Two Fish Heads Are Better Than One T-Shirt</p>
+          <p>$27.99</p>
+
         </div>
         <div class="merchandise1">
           <img id="cutter" src="pics/cutter.jpeg">
-          <p>Pat's Salmon Cookie Dough Form</p>
+          <p>Pat's Shell Of A Salmon Dough Form</p>
+          <p>$5.00</p>
         </div>
       </section>
       <section id="onlinestore2">
         <div class="merchandise2">
           <img id="magnets" src="pics/fishmagnets.jpg">
           <p>Pat's "Real Fishy Smell" Refrigerator Magnets</p>
+          <p>$6.99</p>
         </div>
         <div class="merchandise2">
           <img id="cookies" src="pics/frosted-cookie.jpg">
           <p>Pat's Original Salmon Cookies</p>
+          <p>$10 / Baker's Dozen</p>
         </div>
       </section>
 
       <section id="orderform">
         <form>
           <fieldset>
-            <label>First and Last Name</label>
-            <input type="text" name="name">
-            <label>Address</label>
-            <textarea name="address" cols="20" rows="5"></textarea>
-            <label>Phone Number</label>
-            <input type="text" name="phonenumber">
+            <legend>Contact Information</legend><br>
+            <label>First and Last Name:</label>
+            <input type="text" name="name"><br>
+            <label>Address:</label>
+            <textarea name="address" cols="20" rows="4"></textarea><br>
+            <label>Phone:</label>
+            <input type="text" name="phonenumber"><br>
+            <label>Email:</label>
+            <input type="text" name="email">
           </fieldset>
           <fieldset>
-            <label>T-Shirt</label>
-            <input type="text" name="t-shirt">
+            <legend>Merchandise</legend>
+            <label>T-Shirt (unisex)</label>
+            <select name="t-shirt">
+              <option value="x-small">x-small</option>
+              <option value="small">small</option>
+              <option value="mediumd">medium</option>
+              <option value="large">large</option>
+              <option value="x-large">x-large</option>
+            </select>
+            <label>Amount</label>
+            <select name="amountofshirts">
+              <option value="one">1</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="5+">5+</option>
+            </select><br>
+            <label>Pat's Shell Of A Salmon Dough Form</label>
+            <select name="doughform">
+              <option value="one">1</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="5+">5+</option>
+            </select><br>
+            <label>Pat's Refrigerator Magnets</label>
+            <select name="magnets">
+              <option value="one">1</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="5+">5+</option>
+            </select><br>
+            <label>Pat's Original Salmon Cookies</label>
+            <select name="cookies">
+              <option value="one">1</option>
+              <option value="two">2</option>
+              <option value="three">3</option>
+              <option value="four">4</option>
+              <option value="5+">5+</option>
+            </select>
+            <fieldset id="paymentcard">
+              <label>Credit or Debit:</label>
+              <input type="radio" name="debit" value="debit" checked="checked" /> Debit
+              <input type="radio" name="credit" value="credit" /> Credit<br>
+              <label>Card Number:</label>
+              <input type="text" name="credit card"><br>
+              <label>Expiration (MM/YY):</label>
+              <input id="expiration" type="text" name="expiration" maxlength="5">
+              <label>CVV</label>
+              <input id="cvv" type="text" name="cvv">
+            </fieldset>
           </fieldset>
+          <fieldset id="placeorder">
+            <input id="submit" type="submit" name="place order" value="Place Order" />
+          </fieldset>
+         
         </form>
       </section>
 
@@ -90,7 +152,7 @@
       </section>
     </main>
     <footer>
-    
+      <p></p>
     </footer>
   </body>
 </html>

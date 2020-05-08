@@ -24,6 +24,11 @@ a{
 }
  /*items for purchase*/
 
+ p{
+   font-weight: bold;
+   margin-top: 5px;
+ }
+
  #onlinestore1{
   text-align: center;
   position: relative;
@@ -75,10 +80,55 @@ a{
 /* order form section */
 
 #orderform{
-  border: 1px solid black;
-  height: 500px;
-  margin: 20px;
+  display: inline-block;
+  height: 275px;
+  margin-left: 100px;
 }
+
+form{
+  text-align: right;
+}
+
+input, select{
+  margin: 5px;
+}
+
+fieldset{
+  background-color: rgb(238, 219, 222);
+  border: 1px solid rgb(143, 35, 35);
+  float: left;
+  height: 250px;
+  margin-left: 35px;
+  width: 400px;
+}
+
+#paymentcard{
+  border: 0;
+  height: 100px;
+  padding-right: 5px;
+  text-align: right;
+}
+
+#expiration{
+  width: 40px;
+}
+
+#cvv{
+  width: 30px;
+}
+
+#placeorder{
+  background-color: white;
+  border: 0;
+  height: 40px;
+  margin-left: 518px;
+}
+
+#submit:hover{
+  color: maroon;
+  font-weight: bold;
+}
+
 /* locations*/
 
 #locationSection{
