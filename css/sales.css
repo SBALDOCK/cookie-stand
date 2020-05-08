@@ -1,6 +1,12 @@
 header{
-  background-color: rgb(238, 187, 187);
-  height: 50px;
+  background-color: rgb(228, 182, 182);
+  height: 75px;
+  text-align: center;
+}
+
+h1{
+  font-size: 3em;
+  padding: 10px;
 }
 
 table{
