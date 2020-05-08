@@ -1,11 +1,10 @@
 /* font-family: 'Playfair Display', serif; */
-
-html{
-}
-
-header{
-  margin-bottom: 10px;
+body{
   width: 100%;
+}
+header{
+  background-color: pink;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -23,65 +22,64 @@ h1{
 a{
   font-size: 20px;
 }
- /* work below */
+ /*items for purchase*/
 
  #onlinestore1{
   text-align: center;
   position: relative;
-  width: 100%;
  }
 
  .merchandise1{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: inline-block;
-  height: 250px;
+  height: 350px;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
+  width: 450px;
  }
 
  #t-shirt{
-   float: right;
-   height: 150px;
-   width: 150px;
+   display: center;
+   width: 250px;
  }
 
  #cutter{
-  float: right;
-  height: 150px;
-  width: 150px;
+  display: center;
+  width: 250px;
 }
 
 
 #onlinestore2{
   text-align: center;
   position: relative;
-  width: 100%;
  }
 
  .merchandise2{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: inline-block;
   height: 250px;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
+  width: 400px;
  }
 
  #magnets{
-   float: right;
-   height: 150px;
-   width: 150px;
+   display: center;
+   width: 250px;
  }
 
  #cookies{
-  float: right;
-  height: 80px;
-  width: 150px;
+  display: center;
+  width: 250px;
 }
+/* order form section */
 
-
-/* work above */
+#orderform{
+  border: 1px solid black;
+  height: 500px;
+  margin: 20px;
+}
+/* locations*/
 
 #locationSection{
   margin-top: 30px;
@@ -108,7 +106,7 @@ h2{
 
 .backgroundpic{
  height: 130px;
- opacity: 10%;
+ opacity: 20%;
  position: relative;
  width: 100%;
 }
