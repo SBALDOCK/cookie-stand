@@ -1,10 +1,11 @@
 /* font-family: 'Playfair Display', serif; */
 body{
+  background-color: rgb(217, 222, 227);
   width: 100%;
 }
 header{
   background-color:  rgb(228, 182, 182);
-  border-bottom: 2px solid black;
+  border-bottom: 10px solid rgb(194, 181, 181);
   margin-bottom: 10px;
   text-align: center;
 }
@@ -81,17 +82,32 @@ a{
 }
 
 /* order form section */
+#information{
+  background-color: rgb(235, 225, 225);
+  border: 3px solid rgb(228, 182, 182);
+  left: 250px;
+  position: absolute;
+  height: 255px;
+  width: 400px;
+}
 
+#amounts{
+  background-color: rgb(235, 225, 225);
+  border: 3px solid rgb(228, 182, 182);
+  left: 675px;
+  position: absolute;
+  height: 255px;
+  width: 400px;
+}
 fieldset{
   background-color: rgb(235, 225, 225);
   border: 3px solid rgb(228, 182, 182);
   float: left;
-  height: 255px;
-  margin-left: 20px;
-  width: 400px;
+  /* margin-left: 100px; */
 }
 
 form{
+  position: relative;
   text-align: right;
 }
 
@@ -127,8 +143,15 @@ legend{
 #placeorder{
   background-color: white;
   border: 0;
+  position: relative;
   height: 40px;
   margin-left: 455px;
+}
+
+#submit{
+  left: 525px;
+  position: absolute;
+  top: 260px;
 }
 
 #submit:hover{
@@ -148,7 +171,7 @@ h2{
   font-size: 20px;
   position: absolute;
   margin-top: 5px; 
-  margin-left: 75px;
+  margin-left: 100px;
   top: 15px;
   text-align: center;
 }
@@ -169,7 +192,7 @@ h2{
 }
 
 .phone{
-  margin-left: 50px;
+  margin-left: 75px;
   margin-top: 5px;
   position: absolute;
   top: 50px;
@@ -177,9 +200,53 @@ h2{
 }
 
 .address{
-  margin-left: 40px;
+  margin-left: 65px;
   margin-top: 10px;
   position: absolute;
   top: 75px;
   text-align: center;
+}
+
+footer{
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+#copyright{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#contactus{
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contactus:hover{
+  color: salmon;
+}
+
+#contactus:visited{
+  text-decoration: none;
+}
+
+#homepage{
+  color: black;
+  font-weight: bold;;
+  font-size: 16px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+#homepage:hover{
+  color: salmon;
+}
+
+#homepage:visited{
+  text-decoration: none;
 }

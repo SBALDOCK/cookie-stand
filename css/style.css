@@ -5,7 +5,8 @@ body{
 }
 
 header{
-  background-color: white;
+  background-color: rgb(246, 230, 230);
+  border-bottom: 10px solid rgb(194, 181, 181);
   margin-bottom: 30px;
   padding-bottom: 20px; 
   width: 100%;
@@ -34,6 +35,7 @@ h1{
 
 .pagelinks{
   background-color: salmon;
+  box-shadow: 5px 5px 5px #777777;
   border-radius: 25px;
   color: black;
   display: inline-block;
@@ -55,7 +57,9 @@ h1{
 }
 
 #bio{
+  color: rgb(37, 36, 36);
   float: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   margin-left: 100px;
   margin-top: 30px;
   width: 700px;
@@ -116,14 +120,13 @@ h1{
   color: black;
   padding: 5px;
   position: absolute;
-  right: 120px;
-  top: 270px;
+  right: 335px;
+  top: 670px;
   text-decoration: none;
 }
 
 #testimonial:hover{
   color: maroon;
-  font-weight: bold;
 }
 
 #locationSection{
@@ -136,7 +139,7 @@ h2{
   font-size: 20px;
   position: absolute;
   margin-top: 5px; 
-  margin-left: 75px;
+  margin-left: 100px;
   top: 15px;
   text-align: center;
 }
@@ -159,8 +162,7 @@ h2{
 
 .phone{
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 45px;
-  margin-top: 5px;
+  margin-left: 70px;
   position: absolute;
   top: 50px;
   text-align: center
@@ -168,16 +170,49 @@ h2{
 
 .address{
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 35px;
+  margin-left: 60px;
   margin-top: 10px;
   position: absolute;
   top: 75px;
   text-align: center;
 }
 
-footer{
-  margin-top: 20px;
+#salmon2{
+  opacity: 50%;
+  position: relative;
+}
+
+#openinghours{
+  font-weight: bold;
+  position: absolute;
+  left: 650px;
+  top: 1015px;
+}
+
+#hours{
   text-align: center;
+}
+
+footer{
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+#copyright{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.contactus{
+  /* display: inline-block; */
+  text-decoration: none;
+}
+
+.contactus:visited{
+  text-decoration: none;
 }
 
 
