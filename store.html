@@ -41,7 +41,7 @@
 
       <section id="orderform">
         <form>
-          <fieldset>
+          <fieldset id="information">
             <legend>Contact Information</legend><br>
             <label>First and Last Name:</label>
             <input type="text" name="name"><br>
@@ -53,7 +53,7 @@
             <input type="text" name="email"><br>
             <input type="submit" name="verify" value="Verify Address">
           </fieldset>
-          <fieldset>
+          <fieldset id="amounts">
             <legend>Merchandise</legend>
             <label>T-Shirt (unisex)</label>
             <select name="t-shirt">
@@ -106,7 +106,7 @@
               <input id="cvv" type="text" name="cvv">
           </fieldset>
           <fieldset id="placeorder">
-            <input id="submit" type="submit" name="place order" value="Place Order" />
+              <input id="submit" type="submit" name="place order" value="Place Order" />
           </fieldset>
          
         </form>
@@ -150,8 +150,10 @@
         </div>
       </section>
     </main>
-    <footer>
-      <p></p>
+    <footer id="footer">
+      <p id="copyright">&copy; All Rights Reserved</p>
+      <a id="contactus" href="#"> | Email Us |</a>
+      <a id="homepage" href="index.html"> | Home Page |</a>
     </footer>
   </body>
 </html>

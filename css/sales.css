@@ -1,5 +1,9 @@
+body{
+  background-color: rgb(236, 240, 243);
+}
+
 header{
-  background-color: rgb(228, 182, 182);
+  background-color: rgb(243, 186, 186);
   height: 75px;
   text-align: center;
 }
@@ -10,21 +14,37 @@ h1{
 }
 
 table{
-  margin-bottom: 30px;
+  border-bottom:  10px solid rgb(194, 181, 181);
+  margin-bottom: 40px;
   width: 100%;
 }
 
 #table{
-  border: 1px solid black;
-  margin: auto;
   width: 500px;
 }
 
-td{
-  border: 3px solid lightgray;
-  font-family: Arial, Helvetica, sans-serif;
+th{
+  color: black;
   text-align: center;
-  padding: 5px;
+}
+
+td{
+  border-left:  5px ridge; rgb(172, 167, 167);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+
+tr{
+  border: 5px ridge rgb(172, 167, 167);
+}
+
+tr:nth-child(odd){
+  background-color: rgb(218, 212, 212);
+}
+
+tr:hover{
+  background-color: rgb(228, 182, 182);
 }
 
 #mainpage{
@@ -35,8 +55,8 @@ td{
   background-color: white;
   border-radius: 10px;
   border: 4px solid rgb(228, 182, 182);
-  text-decoration: none;
   padding: 5px;
+  text-decoration: none;
 }
 
 #linktoindex:hover{
