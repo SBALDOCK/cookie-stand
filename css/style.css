@@ -1,10 +1,13 @@
 /* font-family: 'Playfair Display', serif; */
 
-html{
-
+body{
+  background-color: rgb(217, 222, 227);
 }
 
 header{
+  background-color: white;
+  margin-bottom: 30px;
+  padding-bottom: 20px; 
   width: 100%;
   text-align: center;
 }
@@ -13,7 +16,10 @@ header{
   margin-top: 20px;
 }
 
+
 h1{
+  color: maroon;
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
   font-size: 40px;
   margin-top: 40px;
@@ -31,6 +37,7 @@ h1{
   border-radius: 25px;
   color: black;
   display: inline-block;
+  font-family: 'Playfair Display', serif;
   margin-left: 30px;
   margin-right: 30px;
   padding: 7px 25px;
@@ -47,72 +54,23 @@ h1{
   text-decoration: none;
 }
 
-#onlinestore1{
-  text-align: center; 
-  position: relative;
-  width: 100%;
- }
-
- .merchandise1{
-  border: 1px solid black;
-  display: inline-block;
-  height: 250px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px; 
-  text-align: left;
-  width: 500px;
- }
-
- #t-shirt{
-  float: right;
-  height: 150px;
-  width: 150px;
- }
-
- #cutter{
-  float: right;
-  height: 150px;
-  width: 150px;
+#bio{
+  float: left;
+  margin-left: 100px;
+  margin-top: 30px;
+  width: 700px;
 }
 
-
-#onlinestore2{
-  text-align: center;
-  position: relative;
-  width: 100%;
- }
-
- .merchandise2{
-  border: 1px solid black;
-  display: inline-block;
-  height: 250px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px; 
-  width: 500px;
- }
-
- #magnets{
-  float: right;
-  height: 150px;
-  width: 150px;
- }
-
- #cookies{
-  float: right;
-  height: 80px;
-  width: 150px;
+#customers{
+ display: inline-block;
+ margin-bottom: 50px;
 }
-
 
 #container{
-  border: 1px solid black;
   position: relative;
   height: 225px;
-  margin-left: 580px;
-  margin-right: 40px;
-  margin-top: 30px; 
+  left: 900px;
+  text-align: center;
   width: 400px;
 }
 
@@ -123,19 +81,18 @@ h1{
 
 .fadetotext{
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0%;
-  transition: .5s ease;
   background-color: salmon;
+  height: 100%;
+  opacity: 0%;
+  top: 34.5px;
+  transition: .5s ease;
+  width: 100%;
 }
 
 .realfamily{
-  display: block;
+  position: absolute;
+  right: 0;
+  top: 34px;
   width: 400px;
 }
 
@@ -143,17 +100,33 @@ h1{
   color: white;
   font-weight: bolder;
   font-size: 16px;
+  margin-left: 200px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 120px; 
+  /* margin-top: -241px; */
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  text-align: center;
+  /* text-align: center; */
+}
+
+#testimonial{
+  border: 3px solid rgb(167, 162, 162);
+  border-radius: 10px;
+  color: black;
+  padding: 5px;
+  position: absolute;
+  right: 120px;
+  top: 270px;
+  text-decoration: none;
+}
+
+#testimonial:hover{
+  color: maroon;
+  font-weight: bold;
 }
 
 #locationSection{
-  margin-top: 30px; 
   position: relative;
   text-align: center;
   width: 100%;
@@ -169,6 +142,7 @@ h2{
 }
 
 .locations{
+  font-family: Arial, Helvetica, sans-serif;
   border: 1px solid black;
   display: inline-block;
   height: 130px;
@@ -184,7 +158,8 @@ h2{
 }
 
 .phone{
-  margin-left: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 45px;
   margin-top: 5px;
   position: absolute;
   top: 50px;
@@ -192,7 +167,8 @@ h2{
 }
 
 .address{
-  margin-left: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 35px;
   margin-top: 10px;
   position: absolute;
   top: 75px;
@@ -200,5 +176,9 @@ h2{
 }
 
 footer{
+  margin-top: 20px;
   text-align: center;
 }
+
+
+
