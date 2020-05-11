@@ -1,7 +1,10 @@
 /* font-family: 'Playfair Display', serif; */
+html{
+  width: 100%;
+}
 
 body{
-  background-color: rgb(217, 222, 227);
+  background-color: rgba(204, 206, 209, 0.692);
 }
 
 header{
@@ -9,14 +12,12 @@ header{
   border-bottom: 10px solid rgb(194, 181, 181);
   margin-bottom: 30px;
   padding-bottom: 20px; 
-  width: 100%;
   text-align: center;
 }
 
 #salmon{
   margin-top: 20px;
 }
-
 
 h1{
   color: maroon;
@@ -56,72 +57,55 @@ h1{
   text-decoration: none;
 }
 
-#bio{
-  color: rgb(37, 36, 36);
-  float: left;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-left: 100px;
-  margin-top: 30px;
-  width: 700px;
+#maincontent{
+  display: flex;
+  justify-content: space-around;
 }
 
-#customers{
- display: inline-block;
- margin-bottom: 50px;
+#aboutcompany{
+  display: flex;
+  flex-direction: column;
+}
+
+.bio{
+  color: rgb(37, 36, 36);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 20px;
+  width: 600px;
+}
+
+#photos{
+  position: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.tinypics{
+  width: 60px;
+}
+
+#review{
+ display: flex;
 }
 
 #container{
-  position: relative;
-  height: 225px;
-  left: 900px;
-  text-align: center;
-  width: 400px;
+ display: flex;
+ flex-direction: column;
+ text-align: center;
 }
 
-
-#container:hover .fadetotext{
-  opacity: 90%;
-}
-
-.fadetotext{
-  position: absolute;
-  background-color: salmon;
-  height: 100%;
-  opacity: 0%;
-  top: 34.5px;
-  transition: .5s ease;
-  width: 100%;
-}
-
-.realfamily{
-  position: absolute;
-  right: 0;
-  top: 34px;
-  width: 400px;
-}
-
-.paidactors{
-  color: white;
-  font-weight: bolder;
-  font-size: 16px;
-  margin-left: 200px;
-  position: absolute;
-  top: 120px; 
-  /* margin-top: -241px; */
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  /* text-align: center; */
+#familyphoto{
+  width: 600px;
 }
 
 #testimonial{
   border: 3px solid rgb(167, 162, 162);
   border-radius: 10px;
   color: black;
+  margin-left: 210px;
+  margin-right: 210px;
+  margin-top: 5px;
   padding: 5px;
-  position: absolute;
-  right: 335px;
-  top: 670px;
   text-decoration: none;
 }
 
@@ -129,51 +113,37 @@ h1{
   color: maroon;
 }
 
-#locationSection{
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-h2{
-  font-size: 20px;
-  position: absolute;
-  margin-top: 5px; 
-  margin-left: 100px;
-  top: 15px;
-  text-align: center;
+#stores{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
 }
 
 .locations{
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid black;
-  display: inline-block;
-  height: 130px;
-  margin: 10px 10px 10px 10px;
-  width: 17%;
+  height: 120px;
 }
 
 .backgroundpic{
- height: 130px;
- position: relative;
- opacity: 10%;
- width: 100%;
-}
+  height: 120px;
+  opacity: 10%;
+  width: 200px;
+ }
 
-.phone{
-  font-family: Arial, Helvetica, sans-serif;
-  margin-left: 70px;
-  position: absolute;
-  top: 50px;
-  text-align: center
-}
 
-.address{
-  font-family: Arial, Helvetica, sans-serif;
-  margin-left: 60px;
-  margin-top: 10px;
-  position: absolute;
-  top: 75px;
+ .countries{
+   position: relative;
+   text-align: center;
+   top: -94px;
+ }
+
+ .phone, .address{
+   margin-top: 3px;
+ }
+
+#hours{
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -184,13 +154,9 @@ h2{
 
 #openinghours{
   font-weight: bold;
-  position: absolute;
-  left: 650px;
-  top: 1015px;
-}
-
-#hours{
-  text-align: center;
+  position: relative;
+  left: 0px;
+  top: -120px;
 }
 
 footer{
@@ -207,11 +173,18 @@ footer{
 }
 
 .contactus{
-  /* display: inline-block; */
+  color: black;
+  font-weight: bold;
   text-decoration: none;
 }
 
+.contactus:hover{ 
+  color:  salmon;
+  font-weight: bold;
+}
+
 .contactus:visited{
+  color: black;
   text-decoration: none;
 }
 
